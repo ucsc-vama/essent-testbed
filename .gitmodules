@@ -28,3 +28,6 @@
 [submodule "rocket-recent/riscv-isa-sim"]
 	path = rocket-recent/riscv-isa-sim
 	url = https://github.com/riscv/riscv-isa-sim.git
+[submodule "boom21/riscv-fesvr"]
+	path = boom21/riscv-fesvr
+	url = https://github.com/riscv/riscv-fesvr.git
