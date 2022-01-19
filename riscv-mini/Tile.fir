@@ -1860,8 +1860,8 @@ circuit Tile :
     node _T_111 = and(io.nasti.r.ready, io.nasti.r.valid) @[Decoupled.scala 37:37]
     reg value : UInt<1>, clock with :
       reset => (reset, UInt<1>("h0")) @[Counter.scala 26:33]
+    node _T_115 = eq(value, UInt<1>("h1")) @[Counter.scala 34:24]
     when _T_111 : @[Counter.scala 63:17]
-      node _T_115 = eq(value, UInt<1>("h1")) @[Counter.scala 34:24]
       node _T_117 = add(value, UInt<1>("h1")) @[Counter.scala 35:22]
       node _T_118 = tail(_T_117, 1) @[Counter.scala 35:22]
       value <= _T_118 @[Counter.scala 35:13]
@@ -1870,8 +1870,8 @@ circuit Tile :
     node _T_119 = and(io.nasti.w.ready, io.nasti.w.valid) @[Decoupled.scala 37:37]
     reg value_1 : UInt<1>, clock with :
       reset => (reset, UInt<1>("h0")) @[Counter.scala 26:33]
+    node _T_123 = eq(value_1, UInt<1>("h1")) @[Counter.scala 34:24]
     when _T_119 : @[Counter.scala 63:17]
-      node _T_123 = eq(value_1, UInt<1>("h1")) @[Counter.scala 34:24]
       node _T_125 = add(value_1, UInt<1>("h1")) @[Counter.scala 35:22]
       node _T_126 = tail(_T_125, 1) @[Counter.scala 35:22]
       value_1 <= _T_126 @[Counter.scala 35:13]
@@ -2333,8 +2333,8 @@ circuit Tile :
     node _T_111 = and(io.nasti.r.ready, io.nasti.r.valid) @[Decoupled.scala 37:37]
     reg value : UInt<1>, clock with :
       reset => (reset, UInt<1>("h0")) @[Counter.scala 26:33]
+    node _T_115 = eq(value, UInt<1>("h1")) @[Counter.scala 34:24]
     when _T_111 : @[Counter.scala 63:17]
-      node _T_115 = eq(value, UInt<1>("h1")) @[Counter.scala 34:24]
       node _T_117 = add(value, UInt<1>("h1")) @[Counter.scala 35:22]
       node _T_118 = tail(_T_117, 1) @[Counter.scala 35:22]
       value <= _T_118 @[Counter.scala 35:13]
@@ -2343,8 +2343,8 @@ circuit Tile :
     node _T_119 = and(io.nasti.w.ready, io.nasti.w.valid) @[Decoupled.scala 37:37]
     reg value_1 : UInt<1>, clock with :
       reset => (reset, UInt<1>("h0")) @[Counter.scala 26:33]
+    node _T_123 = eq(value_1, UInt<1>("h1")) @[Counter.scala 34:24]
     when _T_119 : @[Counter.scala 63:17]
-      node _T_123 = eq(value_1, UInt<1>("h1")) @[Counter.scala 34:24]
       node _T_125 = add(value_1, UInt<1>("h1")) @[Counter.scala 35:22]
       node _T_126 = tail(_T_125, 1) @[Counter.scala 35:22]
       value_1 <= _T_126 @[Counter.scala 35:13]
