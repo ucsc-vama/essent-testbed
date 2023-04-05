@@ -16,21 +16,15 @@ INCLUDES = -Iriscv/include -I../../firrtl-sig
 
 LIBS = -Lriscv/lib -Wl,-rpath,riscv/lib -lfesvr -lpthread
 
-TestHarness.h:
-	   cd ../../essent; sbt 'run $(FIR_PATH)'
-
 withVCD_TestHarness.h:
-	   cd ../essent; sbt 'run -O3 -withVCD $(FIR_PATH)'
+	   cd ../../essent; sbt 'run -O3 -withVCD $(FIR_PATH)'
 
 withFST_TestHarness.h:
-	   cd ../essent; sbt 'run -O3 -withFST $(FIR_PATH)'
+	   cd ../../essent; sbt 'run -O3 -withFST $(FIR_PATH)'
 
-emulator: emulator.cc TestHarness.h 
-	        $(CXX) $(CXXFLAGS) $(INCLUDES) emulator.cc -o emulator $(LIBS)
-
-withVCD_emulator: emulator.cc withVCD_TestHarness.h 
+withVCD_emulator: emulator.cc withVCD_TestHarness.h libfesvr.so 
 	        $(CXX) $(CXXFLAGS) $(INCLUDES) emulator.cc -o emulator_vcd $(LIBS)
 
-withFST_emulator: emulator.cc withFST_TestHarness.h 
+withFST_emulator: emulator.cc withFST_TestHarness.h libfesvr.so
 	        $(CXX) $(CXXFLAGS) $(INCLUDES) emulator.cc -o emulator_fst $(LIBS)
 
